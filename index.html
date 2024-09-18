@@ -9,72 +9,82 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #e9ecf0; /* Light modern background */
             color: #333;
         }
         header {
-            background-color: #222;
+            background-color: #1b1f24;
             color: #fff;
-            padding: 50px 0;
+            padding: 60px 0;
             text-align: center;
-            border-bottom: 5px solid #007bff;
+            border-bottom: 2px solid #007bff;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 1px;
+            font-size: 3em;
+            letter-spacing: 1.5px;
+            font-weight: 300;
         }
         header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
+            font-size: 1.3em;
+            margin: 15px 0 0;
+            font-weight: 200;
         }
         .container {
-            width: 85%;
+            width: 80%;
             margin: 40px auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two projects per row */
-            gap: 40px;
+            grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+            gap: 30px;
         }
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr; /* Stack projects vertically on smaller screens */
+                grid-template-columns: 1fr; /* Single column on smaller screens */
             }
         }
         .project {
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            border-radius: 16px; /* More rounded corners for a sleek look */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #dee2e6; /* Subtle border for a clean, polished look */
+            overflow: hidden;
         }
         .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px); /* Slight lift effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for modern aesthetic */
         }
         .project img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 12px; /* Subtle roundness for image */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover img {
+            transform: scale(1.05); /* Slight zoom effect on hover for interactivity */
         }
         .project h3 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.6em;
             color: #007bff;
+            font-weight: 400;
         }
         .project p {
             font-size: 1em;
             color: #555;
-            margin: 10px 0;
+            margin: 10px 0 0;
+            font-weight: 300;
         }
         .project a {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
+            margin-top: 15px;
+            padding: 12px 24px;
             background-color: #007bff;
             color: white;
-            border-radius: 6px;
+            border-radius: 50px; /* Rounded buttons for a softer look */
             text-decoration: none;
+            font-weight: 300;
             transition: background-color 0.3s ease;
         }
         .project a:hover {
@@ -82,10 +92,10 @@
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #222;
+            padding: 30px;
+            background-color: #1b1f24;
             color: white;
-            border-top: 5px solid #007bff;
+            border-top: 2px solid #007bff;
             margin-top: 40px;
         }
         footer p {
