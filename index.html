@@ -58,6 +58,13 @@
             border-radius: 16px;
             overflow: hidden;
         }
+        .project-featured img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
         .project-featured h3 {
             color: #38b2ac;
             font-size: 1.8em;
@@ -76,6 +83,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 300;
+            transition: background-color 0.3s ease;
         }
         .project-featured a:hover {
             background-color: #319795;
@@ -111,6 +119,20 @@
             margin-top: 5px;
             font-weight: 300;
         }
+        .project a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background-color: #38b2ac;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 300;
+            transition: background-color 0.3s ease;
+        }
+        .project a:hover {
+            background-color: #319795;
+        }
         .personal-bubble {
             background-color: #2d3748;
             padding: 20px;
@@ -140,6 +162,7 @@
         <!-- Featured Project Section -->
         <div class="project-section">
             <div class="project-featured">
+                <img src="/images/Platformer.png" alt="GM Platformer Game Image">
                 <h3>GM Platformer</h3>
                 <p><strong>Engine:</strong> Unreal Engine</p>
                 <p><strong>Programming Language:</strong> C++</p>
@@ -201,8 +224,13 @@
                 <h3>Wall Jump Platformer</h3>
                 <p><strong>Engine:</strong> Unreal Engine</p>
                 <p><strong>Programming Language:</strong> C++</p>
-                <p>A wall-jumping platformer that explores various game design principles, including smooth player movement and environment interaction.</p>
+                <p>This wall-jumping platformer allowed me to explore physics-driven gameplay and focus on game feel, which is a crucial aspect of my design philosophy.</p>
                 <a href="https://github.com/Toothles2004/GD-WallJumpPlatformer" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Personal Info Bubble -->
+            <div class="personal-bubble">
+                <p>I’m always eager to collaborate with other developers to bring unique gameplay ideas to life, combining technical expertise with creativity.</p>
             </div>
 
             <!-- Game -->
