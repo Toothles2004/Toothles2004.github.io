@@ -48,10 +48,12 @@
             margin: 0 auto;
         }
         .project-section {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
+            display: flex; /* Change to flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
             margin-bottom: 40px;
+            padding: 0 20px; /* Add padding to prevent content from touching edges */
         }
         .project-featured {
             background-color: #2d3748;
@@ -61,6 +63,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
+            max-width: 800px; /* Limit width for better appearance */
+            width: 100%; /* Make it responsive */
         }
         .project-featured:hover {
             transform: translateY(-8px);
@@ -168,15 +172,17 @@
             .alternate-layout {
                 grid-template-columns: 1fr;
             }
+            .project-section {
+                height: auto; /* Allow height to auto on smaller screens */
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Leen Ritserveldt - Game Development Portfolio</h1>
-        <p>Hello, I'm Leen Ritserveldt, currently a third-year Game Development student focusing on gameplay programming.</p>
-        <p>As a kid, I spent a lot of time watching videos about how games are made. Combined with introductory lessons to programming in high school, this sparked my passion for game design and development.</p>
-        <p>For several years, during the summer, I worked at a retirement home, which taught me social skills, patience, and the ability to explain complex ideas clearly.</p>
+        <p>I'm Leen Ritserveldt and currently i'm a 3rd year DAE student in game development</p>
+        <p>My main focus lies in gameplay programming</p>
     </header>
 
     <div class="container">
