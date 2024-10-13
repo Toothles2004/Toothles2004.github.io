@@ -67,30 +67,49 @@
             font-size: 1.1em;
             line-height: 1.6;
         }
+        .project-featured a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background-color: #38b2ac;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        .project-featured a:hover {
+            background-color: #319795;
+        }
+        .alternate-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
         .project {
             background-color: #2d3748;
             padding: 20px;
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            overflow: hidden;
         }
         .project img {
-            width: 50%;
+            max-width: 100%;
+            height: auto;
             border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
         }
-        .project-info {
-            flex: 1;
-        }
-        .project-info h3 {
+        .project h3 {
             margin: 0;
             font-size: 1.6em;
             color: #38b2ac;
+            font-weight: 500;
         }
-        .project-info p {
+        .project p {
             font-size: 1em;
             color: #bcd0e3;
             margin-top: 5px;
+            font-weight: 300;
         }
         .personal-bubble {
             background-color: #2d3748;
@@ -102,17 +121,9 @@
             font-size: 1.1em;
             margin: 0;
         }
-        .alternate-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
         @media (max-width: 768px) {
             .alternate-layout {
                 grid-template-columns: 1fr;
-            }
-            .project, .personal-bubble {
-                flex-direction: column;
             }
         }
     </style>
@@ -120,23 +131,19 @@
 <body>
     <header>
         <h1>Leen Ritserveldt - Game Development Portfolio</h1>
-        <p>Welcome to my portfolio! I'm a third-year Game Development student focused on gameplay programming.</p>
+        <p>Hello, I'm Leen Ritserveldt, currently a third-year Game Development student focusing on gameplay programming.</p>
+        <p>As a kid, I spent a lot of time watching videos about how games are made. Combined with introductory lessons to programming in high school, this sparked my passion for game design and development.</p>
+        <p>For several years, during the summer, I worked at a retirement home, which taught me social skills, patience, and the ability to explain complex ideas clearly.</p>
     </header>
 
     <div class="container">
-        <!-- Intro Section -->
-        <div class="intro-section">
-            <h2>About Me</h2>
-            <p>I'm passionate about gameplay programming and have been exploring game mechanics and player interactions. My journey began with an interest in how games are made, and through my studies at DAE, I’ve refined my skills to focus on building engaging gameplay experiences.</p>
-        </div>
-
         <!-- Featured Project Section -->
         <div class="project-section">
             <div class="project-featured">
                 <h3>GM Platformer</h3>
                 <p><strong>Engine:</strong> Unreal Engine</p>
                 <p><strong>Programming Language:</strong> C++</p>
-                <p>This platformer project is a showcase of my interest in gameplay programming. I designed it to explore advanced mechanics such as player movement, collision detection, and fluid character control. It represents my drive to craft responsive, enjoyable gameplay experiences.</p>
+                <p>This platformer project highlights my focus on gameplay programming. It features advanced mechanics such as smooth player movement, collision detection, and physics-based interaction. Creating this game allowed me to dive deep into gameplay elements, refining the experience to ensure responsive, engaging controls.</p>
                 <a href="https://github.com/Toothles2004/GM-Platformer" target="_blank">View on GitHub</a>
             </div>
         </div>
@@ -146,21 +153,19 @@
             <!-- Game -->
             <div class="project">
                 <img src="/images/CAE.png" alt="Group24 CAE Game Image">
-                <div class="project-info">
-                    <h3>Group24 CAE</h3>
-                    <p><strong>Engine:</strong> Unreal Engine</p>
-                    <p><strong>Programming Language:</strong> C++</p>
-                    <p>This project allowed me to work collaboratively on complex mechanics in Unreal Engine, sharpening my skills in both gameplay programming and teamwork.</p>
-                    <a href="https://toothles2004.itch.io/group24-cae" target="_blank">Play the Game</a>
-                </div>
+                <h3>Group24 CAE</h3>
+                <p><strong>Engine:</strong> Unreal Engine</p>
+                <p><strong>Programming Language:</strong> C++</p>
+                <p>A collaborative project where I worked with a team to build complex mechanics using Unreal Engine. This helped me develop gameplay systems while learning to work in a collaborative environment.</p>
+                <a href="https://toothles2004.itch.io/group24-cae" target="_blank">Play the Game</a>
             </div>
 
-            <!-- Info Bubble -->
+            <!-- Personal Info Bubble -->
             <div class="personal-bubble">
                 <p>I’ve always been fascinated by how things work behind the scenes in games. This curiosity led me to take programming lessons in high school, igniting my passion for building interactive experiences.</p>
             </div>
 
-            <!-- Info Bubble -->
+            <!-- Personal Info Bubble -->
             <div class="personal-bubble">
                 <p>For several years, I worked during the summer in a retirement home, which taught me patience, communication, and understanding—skills I find valuable when collaborating on game projects.</p>
             </div>
@@ -168,13 +173,11 @@
             <!-- Game -->
             <div class="project">
                 <img src="/images/Flowfield.png" alt="FlowField Pathfinding Image">
-                <div class="project-info">
-                    <h3>FlowField Pathfinding</h3>
-                    <p><strong>Engine:</strong> Custom</p>
-                    <p><strong>Programming Language:</strong> C++</p>
-                    <p>I researched and developed flow field pathfinding algorithms to explore optimization techniques in AI-driven systems, a key interest of mine in game development.</p>
-                    <a href="https://github.com/Toothles2004/gpp-researchTopic" target="_blank">View on GitHub</a>
-                </div>
+                <h3>FlowField Pathfinding</h3>
+                <p><strong>Engine:</strong> Custom</p>
+                <p><strong>Programming Language:</strong> C++</p>
+                <p>I researched and developed flow field pathfinding algorithms to explore optimization techniques in AI-driven systems, a key interest of mine in game development.</p>
+                <a href="https://github.com/Toothles2004/gpp-researchTopic" target="_blank">View on GitHub</a>
             </div>
         </div>
     </div>
