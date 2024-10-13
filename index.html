@@ -51,12 +51,20 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
+            margin-bottom: 40px;
         }
         .project-featured {
             background-color: #2d3748;
             padding: 30px;
             border-radius: 16px;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .project-featured:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         .project-featured img {
             max-width: 100%;
@@ -64,6 +72,9 @@
             border-radius: 12px;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+        }
+        .project-featured:hover img {
+            transform: scale(1.05);
         }
         .project-featured h3 {
             color: #38b2ac;
@@ -99,6 +110,13 @@
             padding: 20px;
             border-radius: 16px;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         .project img {
             max-width: 100%;
@@ -106,6 +124,9 @@
             border-radius: 12px;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+        }
+        .project:hover img {
+            transform: scale(1.05);
         }
         .project h3 {
             margin: 0;
@@ -188,7 +209,12 @@
                 <p>I’ve always been fascinated by how things work behind the scenes in games. This curiosity led me to take programming lessons in high school, igniting my passion for building interactive experiences.</p>
             </div>
 
-            <!-- Game -->
+            <!-- Personal Info Bubble -->
+            <div class="personal-bubble">
+                <p>.</p>
+            </div>
+			
+			<!-- Game -->
             <div class="project">
                 <img src="/images/Flowfield.png" alt="FlowField Pathfinding Image">
                 <h3>FlowField Pathfinding</h3>
@@ -196,26 +222,6 @@
                 <p><strong>Programming Language:</strong> C++</p>
                 <p>I researched and developed flow field pathfinding algorithms to explore optimization techniques in AI-driven systems, a key interest of mine in game development.</p>
                 <a href="https://github.com/Toothles2004/gpp-researchTopic" target="_blank">View on GitHub</a>
-            </div>
-
-            <!-- Personal Info Bubble -->
-            <div class="personal-bubble">
-                <p>Working in a retirement home during summer breaks taught me valuable communication and collaboration skills, both of which are vital when working on complex game development projects.</p>
-            </div>
-
-            <!-- Game -->
-            <div class="project">
-                <img src="/images/PizzaExpress.png" alt="Pizza Express Game Image">
-                <h3>Pizza Express (Game Jam Project)</h3>
-                <p><strong>Engine:</strong> Unity</p>
-                <p><strong>Programming Language:</strong> C#</p>
-                <p>A fast-paced game developed for a Game Jam. It helped me improve my rapid prototyping skills and explore new ideas within tight deadlines.</p>
-                <a href="https://hefthyn-s.itch.io/pizza-express" target="_blank">Play the Game</a>
-            </div>
-
-            <!-- Personal Info Bubble -->
-            <div class="personal-bubble">
-                <p>In addition to gameplay programming, I enjoy experimenting with various game mechanics, particularly those that enhance user experience and player engagement.</p>
             </div>
 
             <!-- Game -->
@@ -232,6 +238,11 @@
             <div class="personal-bubble">
                 <p>I’m always eager to collaborate with other developers to bring unique gameplay ideas to life, combining technical expertise with creativity.</p>
             </div>
+			
+			<!-- Personal Info Bubble -->
+            <div class="personal-bubble">
+                <p>.</p>
+            </div>
 
             <!-- Game -->
             <div class="project">
@@ -241,6 +252,21 @@
                 <p><strong>Programming Language:</strong> C++</p>
                 <p>This terrain rendering project explores the use of Vulkan API for optimized graphics rendering, particularly in handling large terrains efficiently.</p>
                 <a href="https://github.com/Toothles2004/TerrainRendererVulkan" target="_blank">View on GitHub</a>
+            </div>
+			
+			<!-- Game -->
+            <div class="project">
+                <img src="/images/PizzaExpress.png" alt="Pizza Express Game Image">
+                <h3>Pizza Express (Game Jam Project)</h3>
+                <p><strong>Engine:</strong> Unity</p>
+                <p><strong>Programming Language:</strong> C#</p>
+                <p>A fast-paced game developed for a Game Jam. It helped me improve my rapid prototyping skills and explore new ideas within tight deadlines.</p>
+                <a href="https://hefthyn-s.itch.io/pizza-express" target="_blank">Play the Game</a>
+            </div>
+			
+			<!-- Personal Info Bubble -->
+            <div class="personal-bubble">
+                <p>.</p>
             </div>
         </div>
     </div>
