@@ -128,15 +128,48 @@
             transform: translateY(-8px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+		.project img {
+			max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover img {
+            transform: scale(1.05);
+        }
+        .project h3 {
+            margin: 0;
+            font-size: 1.6em;
+            color: #38b2ac;
+            font-weight: 500;
+        }
         .video-text-section video {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
         }
+		.project p {
+            font-size: 1em;
+			color: #bcd0e3;
+			 margin-top: 5px;
+            font-weight: 300;
+		}
         .text-content {
             color: #bcd0e3;
             font-size: 1.1em;
         }
+		.project a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background-color: #38b2ac;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 300;
+            transition: background-color 0.3s ease;
+		}
         footer {
             text-align: center;
             padding: 20px;
