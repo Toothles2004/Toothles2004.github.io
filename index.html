@@ -9,15 +9,15 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #101112; /* black background */
-            color: #bcd0e3; /* Softer gray for readability */
+            background-color: #101112;
+            color: #bcd0e3;
         }
         header {
-            background-color: #2d3748; /* Darker modern gray */
+            background-color: #2d3748;
             color: #fff;
             padding: 60px 0;
             text-align: center;
-            border-bottom: 3px solid #38b2ac; /* Teal accent */
+            border-bottom: 3px solid #38b2ac;
         }
         header h1 {
             margin: 0;
@@ -34,74 +34,46 @@
             width: 80%;
             margin: 40px auto;
         }
-        .intro-section {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .intro-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .intro-section p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .project-section {
-            display: flex; /* Change to flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100vh; /* Full viewport height */
+        .project-section, .alternate-layout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
             margin-bottom: 40px;
-            padding: 0 20px; /* Add padding to prevent content from touching edges */
+            padding: 0 20px;
         }
-        .project-featured {
+        .project-featured, .project, .personal-bubble {
             background-color: #2d3748;
-            padding: 30px;
+            padding: 20px;
             border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
-            max-width: 800px; /* Limit width for better appearance */
-            width: 100%; /* Make it responsive */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .project-featured:hover {
+        .project-featured:hover, .project:hover, .personal-bubble:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        .project-featured img {
+        .project-featured img, .project img, .personal-bubble img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
-            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
-        .project-featured:hover img {
+        .project-featured:hover img, .project:hover img, .personal-bubble:hover img {
             transform: scale(1.05);
         }
-        .project-featured h3 {
+        .project-featured h3, .project h3 {
             color: #38b2ac;
             font-size: 1.8em;
             margin-bottom: 10px;
         }
-        .project-featured p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .project-featured a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background-color: #38b2ac;
+        .project-featured a, .project a, .project-featured:hover img, .project:hover img, .personal-bubble:hover img {
             color: white;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 300;
             transition: background-color 0.3s ease;
-        }
-        .project-featured a:hover {
-            background-color: #319795;
         }
         .alternate-layout {
             display: grid;
@@ -109,77 +81,38 @@
             gap: 30px;
             margin-bottom: 40px;
         }
-        .project {
+        .video-text-section {
+            grid-column: span 2;
+            display: flex;
+            gap: 30px;
+            align-items: center;
             background-color: #2d3748;
-            padding: 20px;
+            padding: 30px;
             border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .project:hover {
+        .video-text-section:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        .project img {
+        .video-text-section video {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
         }
-        .project:hover img {
-            transform: scale(1.05);
-        }
-        .project h3 {
-            margin: 0;
-            font-size: 1.6em;
-            color: #38b2ac;
-            font-weight: 500;
-        }
-        .project p {
-            font-size: 1em;
+        .text-content {
             color: #bcd0e3;
-            margin-top: 5px;
-            font-weight: 300;
+            font-size: 1.1em;
         }
-        .project a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background-color: #38b2ac;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 300;
-            transition: background-color 0.3s ease;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3748;
+            color: #fff;
+            border-top: 3px solid #38b2ac;
         }
-		.personal-bubble {
-			background-color: #2d3748;
-			padding: 20px;
-			border-radius: 16px; /* Rounded corners */
-			color: #bcd0e3;
-			transition: transform 0.3s ease, box-shadow 0.3s ease; /* For the hover effect */
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-		}
-		
-		.personal-bubble:hover {
-			transform: translateY(-8px); /* Lift on hover */
-			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
-		}
-		
-		.personal-bubble img {
-			max-width: 100%; /* Ensures image is responsive */
-			height: auto;
-			border-radius: 12px; /* Rounded corners for the image */
-			margin-bottom: 20px;
-			transition: transform 0.3s ease; /* Transition for hover */
-		}
-		
-		.personal-bubble:hover img {
-			transform: scale(1.05); /* Slight zoom effect on hover */
-		}
     </style>
 </head>
 <body>
@@ -255,6 +188,19 @@
                 <p><strong>Programming Language:</strong> C#</p>
                 <p>A fast-paced game developed for a Game Jam. Made in a team of 6 people (3 programmers), my main focus was making the minigame and object interactions. I also did bug fixing and needed to work in the other programmer's code.</p>
                 <a href="https://hefthyn-s.itch.io/pizza-express" target="_blank">Play the Game</a>
+            </div>
+        </div>
+		<!-- Video and Text Section -->
+        <div class="video-text-section">
+            <div>
+                <video controls>
+                    <source src="/videos/Table.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="text-content">
+                <h3>Project Insights</h3>
+                <p>This is a passion project me, my dad and my boyfriend worked on. It's a hand-made table made to play DnD, it has a tv screen in the center and the leds are controlled by an arduino and keypad input. This was all programmed in the Arduino IDE which uses C++.</p>
             </div>
         </div>
     </div>
