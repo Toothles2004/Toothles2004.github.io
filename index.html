@@ -34,7 +34,15 @@
             width: 80%;
             margin: 40px auto;
         }
-        .project-section, .alternate-layout {
+		.project-section {
+            display: flex; /* Change to flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+			margin-bottom: 40px;
+			padding: 0 20px;
+		}
+        .alternate-layout {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,25 +50,28 @@
             margin-bottom: 40px;
             padding: 0 20px;
         }
-        .project-featured, .project, .personal-bubble {
+        .project-featured {
             background-color: #2d3748;
-            padding: 20px;
+            padding: 30px;
             border-radius: 16px;
+			overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+			max-width: 800px; /* Limit width for better appearance */
+            width: 100%; /* Make it responsive */
         }
-        .project-featured:hover, .project:hover, .personal-bubble:hover {
+        .project-featured:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        .project-featured img, .project img, .personal-bubble img {
+        .project-featured img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
             transition: transform 0.3s ease;
         }
-        .project-featured:hover img, .project:hover img, .personal-bubble:hover img {
+        .project-featured:hover img {
             transform: scale(1.05);
         }
         .project-featured h3, .project h3 {
@@ -68,12 +79,23 @@
             font-size: 1.8em;
             margin-bottom: 10px;
         }
-        .project-featured a, .project a, .project-featured:hover img, .project:hover img, .personal-bubble:hover img {
+        .project-featured p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .project-featured a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background-color: #38b2ac;
             color: white;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 300;
             transition: background-color 0.3s ease;
+        }
+		.project-featured a:hover {
+            background-color: #319795;
         }
         .alternate-layout {
             display: grid;
@@ -81,6 +103,15 @@
             gap: 30px;
             margin-bottom: 40px;
         }
+		.project {
+			background-color: #2d3748;
+			padding: 20px;
+			border-radius: 16px;
+			overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+		}
         .video-text-section {
             grid-column: span 2;
             display: flex;
@@ -113,6 +144,31 @@
             color: #fff;
             border-top: 3px solid #38b2ac;
         }
+		.personal-bubble {
+			background-color: #2d3748;
+			padding: 20px;
+			border-radius: 16px; /* Rounded corners */
+			color: #bcd0e3;
+			transition: transform 0.3s ease, box-shadow 0.3s ease; /* For the hover effect */
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+		}
+		
+		.personal-bubble:hover {
+			transform: translateY(-8px); /* Lift on hover */
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+		}
+		
+		.personal-bubble img {
+			max-width: 100%; /* Ensures image is responsive */
+			height: auto;
+			border-radius: 12px; /* Rounded corners for the image */
+			margin-bottom: 20px;
+			transition: transform 0.3s ease; /* Transition for hover */
+		}
+		
+		.personal-bubble:hover img {
+			transform: scale(1.05); /* Slight zoom effect on hover */
+		}
     </style>
 </head>
 <body>
