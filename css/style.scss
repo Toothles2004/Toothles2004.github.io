@@ -1,0 +1,225 @@
+// 🎨 Variables
+$font-main: 'Helvetica Neue', Arial, sans-serif;
+$color-bg: #101112;
+$color-light: #bcd0e3;
+$color-accent: #38b2ac;
+$color-accent-hover: #319795;
+$color-card-bg: #2d3748;
+$color-white: #fff;
+$border-radius: 16px;
+$img-radius: 12px;
+$shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+// 🧩 Shared Placeholders
+%card-style {
+  background-color: $color-card-bg;
+  border: 1px solid #e2e8f0;
+  border-radius: $border-radius;
+  box-shadow: $shadow-soft;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+%img-style {
+  max-width: 100%;
+  height: auto;
+  border-radius: $img-radius;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+%project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: $color-accent;
+  color: $color-white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 300;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+}
+
+%project-heading {
+  margin: 0;
+  font-size: 1.6em;
+  color: $color-accent;
+  font-weight: 500;
+}
+
+// 🌐 Global
+body {
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+  background-color: $color-bg;
+  color: $color-light;
+}
+
+// 🧭 Header
+header {
+  background-color: $color-card-bg;
+  color: $color-white;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 3px solid $color-accent;
+
+  h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 1.3em;
+    margin: 15px 0 0;
+    font-weight: 200;
+  }
+}
+
+// 📭 Footer
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: $color-card-bg;
+  color: $color-white;
+  border-top: 3px solid $color-accent;
+}
+
+// 📦 Container
+.container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+// 🔲 Grid Layout
+.alternate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+// ✏️ Text Content
+.text-content {
+  color: $color-light;
+  font-size: 1.1em;
+}
+
+// 🎯 Project Cards
+.project {
+  @extend %card-style;
+  padding: 20px;
+  overflow: hidden;
+
+  a {
+    @extend %project-link;
+  }
+
+  h3 {
+    @extend %project-heading;
+  }
+
+  img {
+    @extend %img-style;
+  }
+
+  p {
+    font-size: 1em;
+    color: $color-light;
+    margin-top: 5px;
+    font-weight: 300;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  &-featured {
+    @extend %card-style;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+
+    a {
+      @extend %project-link;
+    }
+
+    h3 {
+      @extend %project-heading;
+    }
+
+    img {
+      @extend %img-style;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-hover;
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+}
+
+// 👤 Personal Bubble
+.personal-bubble {
+  @extend %card-style;
+  padding: 20px;
+  color: $color-light;
+
+  img {
+    @extend %img-style;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-hover;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// 🎥 Video + Text Section
+.video-text-section {
+  @extend %card-style;
+  grid-column: span 2;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-hover;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+    border-radius: $img-radius;
+  }
+}
