@@ -2,9 +2,37 @@
  # SETTINGS
 /*---------------------------------------*/
 
+$color-bg: #0e1113 !important;
+$color-header: #181c1f !important;
+$color-headings: #eef1f3 !important;
+$color-text: #b7cad4 !important;
+
 /*---------------------------------------/*
  # GENERIC
 /*---------------------------------------*/
+
+body {
+	background-color: $color-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-headings;
+}
+
+p,
+li {
+	color: $color-text;
+}
+
+hr {
+    opacity: .8 !important;
+    border: 1px solid #b7cad4 !important;
+}
 
 /*---------------------------------------/*
  # ELEMENTS
@@ -17,6 +45,28 @@
 /*---------------------------------------/*
  # COMPONENTS
 /*---------------------------------------*/
+
+.c-header {
+	background-color: $color-header;
+	padding: 2rem;
+	text-align: center;
+    margin-bottom: 3rem;
+}
+
+.c-personal {
+    padding: 1rem;
+
+	&__img {
+		width: 100%;
+		height: auto;
+        border-radius: 5%;
+	}
+
+    &__text{
+        padding: 1rem;
+    }
+}
+
 
 /*---------------------------------------/*
  # UTILITIES

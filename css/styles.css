@@ -4,6 +4,29 @@
 /*---------------------------------------/*
  # GENERIC
 /*---------------------------------------*/
+body {
+  background-color: #0e1113 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #eef1f3 !important;
+}
+
+p,
+li {
+  color: #b7cad4 !important;
+}
+
+hr {
+  opacity: 0.8 !important;
+  border: 1px solid #b7cad4 !important;
+}
+
 /*---------------------------------------/*
  # ELEMENTS
 /*---------------------------------------*/
@@ -13,6 +36,25 @@
 /*---------------------------------------/*
  # COMPONENTS
 /*---------------------------------------*/
+.c-header {
+  background-color: #181c1f !important;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.c-personal {
+  padding: 1rem;
+}
+.c-personal__img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+.c-personal__text {
+  padding: 1rem;
+}
+
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
